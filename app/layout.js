@@ -1,4 +1,5 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Rubik } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +12,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const rubik = Rubik({
+  subsets: ["latin"],
+  variable: "--font-rubik", // This will create the CSS variable
+});
+
+const kiona = localFont({
+  src: [
+    {
+      path: "../public/fonts/Kiona-Regular.ttf",
+      style: "normal",
+    },
+  ],
+  variable: "--font-kiona", // CSS variable for usage
+});
+
 export const metadata = {
   title: "E-Summit'26 | BIT Sindri",
   description: "Entrepreneurship Summit 2026, BIT Sindri",
@@ -20,7 +36,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${kiona.variable} ${rubik.variable} antialiased`}
       >
         {children}
       </body>

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
-  return <div className="">E-Summit</div>;
+  return <div className="bg-accent-900 text-3xl">Popular</div>;
 }
