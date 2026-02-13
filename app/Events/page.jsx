@@ -38,7 +38,7 @@ Highlights:
 • Seed funding up to ₹2,00,000
 • Industry & academic mentorship
 • Pre-incubation opportunities`,
-    image: "/images/Texcelerate.jpeg",
+    image: "/images/hero.png",
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ Highlights:
 • Structured mentorship
 • Research & deployment focus
 • Certificate of completion`,
-    image: "/udaan_Fellowship.jpeg",
+    image: "/images/hero.png",
   },
   {
     id: 4,
