@@ -4,7 +4,7 @@ const sponsors = [
   {
     tier: "Title Sponsor",
     name: "BITSANA",
-    logo: "/Bitsana.jpg",
+    logo: "/Bitsaana.jpg",
   },
   {
     tier: "Event Sponsor",
