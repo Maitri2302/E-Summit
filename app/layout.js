@@ -70,7 +70,7 @@ export const metadata = {
     siteName: "E-Summit '26 BIT Sindri",
     images: [
       {
-        url: "/og-image-bits.png", // Create a branded OG image for BIT Sindri
+        url: "/og-image-bits.png",
         width: 1200,
         height: 630,
         alt: "E-Summit '26 BIT Sindri - Fostering Innovation",
