@@ -88,9 +88,9 @@ const WorkshopCard = ({ workshop }) => (
 
       {/* Content */}
       <h3 className="text-white text-xl font-bold mb-1">{workshop.title}</h3>
-      <p className="text-gray-400 text-[10px] font-bold tracking-widest uppercase mb-4">
+      {/* <p className="text-gray-400 text-[10px] font-bold tracking-widest uppercase mb-4">
         BY <span className="text-gray-200">{workshop.provider}</span>
-      </p>
+      </p> */}
       <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
         {workshop.description}
       </p>
@@ -107,13 +107,13 @@ const Workshops = () => {
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 border-b border-accent-500/50 rounded-full px-4 py-1 mb-6">
             <span className="font-kiona! text-blue-100 text-sm uppercase tracking-widest">
-              Wokshops
+              Events
             </span>
           </div>
 
           {/* Heading */}
           <h2 className="text-4xl md:text-5xl font-bold text-white">
-            Our Past<span className="text-accent-400"> Workshops</span>
+            Our Past<span className="text-accent-400"> Initiatives</span>
           </h2>
         </div>
 

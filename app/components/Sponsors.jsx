@@ -78,7 +78,7 @@ const SponsorSection = () => {
           {sponsors.map((sponsor, index) => (
             <div
               key={index}
-              className="group bg-white/3 border border-white/5 hover:border-accent-500/40 rounded-xl p-8 flex flex-col items-center transition-all duration-500 hover:bg-white/5"
+              className="group bg-white/3 border border-white/5 hover:border-accent-500/40 rounded-xl p-4 flex flex-col items-center transition-all duration-500 hover:bg-white/5"
             >
               <span className="text-[9px] font-bold tracking-widest text-gray-500 uppercase mb-4">
                 {sponsor.tier}
