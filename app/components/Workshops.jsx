@@ -35,7 +35,7 @@ const workshops = [
         livelihood, and mining waste innovation.
       </>
     ),
-    logo: "/images/hero.webp",
+    logo: "/images/ideatribe.png",
   },
   {
     title: "TEXcelerate 2025",
@@ -50,7 +50,7 @@ const workshops = [
         and deployment-ready innovation at BIT Sindri.
       </>
     ),
-    logo: "/images/Texcelerate.jpeg",
+    logo: "/images/TEXcelerate.png",
   },
   {
     title: "INNOVATHON 2025",
@@ -66,7 +66,7 @@ const workshops = [
         <strong>₹5,000</strong>.
       </>
     ),
-    logo: "/images/hero.webp",
+    logo: "/images/innovathon.png",
   },
 ];
 
@@ -80,7 +80,7 @@ const WorkshopCard = ({ workshop }) => (
         <Image
           src={workshop.logo}
           alt={workshop.provider}
-          width={160}
+          width={800}
           height={160}
           className="w-full h-full object-cover"
         />

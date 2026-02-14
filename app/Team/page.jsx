@@ -71,7 +71,7 @@ const facultyMembers = [
 const executiveMembers = [
   {
     name: "Syed Adnan Ahmad",
-    role: "Chief Coordinator",
+    role: " President",
     image: "/images/syedd.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/syedadnan03/",
@@ -81,7 +81,7 @@ const executiveMembers = [
   },
   {
     name: "Vivek Tiwari",
-    role: "Vice Chief Coordinator",
+    role: " Vice President",
     image: "/images/vivek_sir.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/vivek-tiwari-b929a822b/",
@@ -91,38 +91,37 @@ const executiveMembers = [
   },
   {
     name: "Manohar Jha",
-    role: "Secretary",
+    role: " Treasurer",
     image: "/images/manoharr.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/manoharjhaa/",
-      instagram:
-        "https://www.instagram.com/_manohar.jha_5?igsh=b2ZkYjExcjV2cmFq",
+      instagram:"https://www.instagram.com/_manohar.jha_5?igsh=b2ZkYjExcjV2cmFq",
       mail: "mailto:manoharjha809@gmail.com",
     },
   },
   {
     name: "Harsh Bhargav",
-    role: "Technical Head",
-    image: "/images/Harsh.png",
+    role: " Technical Secretary",
+    image: "/images/harshsir.png",
     socials: {
-      linkedin: "https://iic.bitsindri.ac.in/Team",
-      instagram: "https://iic.bitsindri.ac.in/Team",
-      mail: "mailto:#",
+      linkedin: "https://www.linkedin.com/in/harshbhargav/",
+      instagram: "https://www.instagram.com/harsh.bhargav.165?igsh=MTVpMjE2aHpoOXBxYQ==",
+      mail: "mailto:Email: harshbhargav440@gmail.com",
     },
   },
   {
     name: "Amit Kumar Mishra",
-    role: "Design Head",
+    role: " General Secretary",
     image: "/images/amit.png",
     socials: {
-      linkedin: "https://iic.bitsindri.ac.in/Team",
-      instagram: "https://iic.bitsindri.ac.in/Team",
+      linkedin: "https://www.linkedin.com/in/amit-mishra-446367259/",
+      instagram: "https://www.instagram.com/akmdesign2026/",
       mail: "mailto:#",
     },
   },
   {
     name: "Kashish Jain",
-    role: "Innovation Head",
+    role: "Operations Executive",
     image: "/images/kashish_mam.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/kashish-jain-a92b05256/",
@@ -131,8 +130,8 @@ const executiveMembers = [
     },
   },
   {
-    name: "Tisha Aggarwal",
-    role: "Community Engagement",
+    name: "Tisha Agrawal",
+    role: "Joint Secretary",
     image: "/images/tisha.png",
     socials: {
       linkedin: "https://iic.bitsindri.ac.in/Team",
@@ -189,7 +188,7 @@ const associateMembers = [
   },
   {
     name: "Kunal Kumar Sonkar",
-    role: "Startup & Incubation",
+    role: " Startup & Incubation",
     image: "/images/kunal.png",
     socials: {
       linkedin: "https://www.linkedin.com/kunal-sonkar-bits",
@@ -199,7 +198,7 @@ const associateMembers = [
   },
   {
     name: "Shivangi Kumari",
-    role: "Innovation Program",
+    role: "Innovtion Program",
     image: "/images/shivangi.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/shivangi-kumari-67b927287/",
@@ -601,8 +600,8 @@ const coordinators = [
     role: "Operations",
     image: "/images/maitri.png",
     socials: {
-      linkedin: "",
-      instagram: "#",
+      linkedin: "https://www.linkedin.com/in/maitri-89a17732a",
+      instagram: "https://www.instagram.com/maitri__232?igsh=MWFxZWhud2NlZDcxZw==",
       mail: "mailto:singhmaitri233@gmail.com",
     },
   },
