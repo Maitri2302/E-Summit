@@ -38,6 +38,9 @@ export const metadata = {
   },
   description:
     "The flagship entrepreneurial summit of BIT Sindri, Dhanbad. Fostering innovation, leadership, and startup culture in India's industrial heartland.",
+  verification: {
+    google: "b0uNWU4nQDY_PvnNkagxVca25Od88LjZcCj-Sbp78Qs",
+  },
   keywords: [
     "E-Summit BIT Sindri",
     "BIT Sindri",
