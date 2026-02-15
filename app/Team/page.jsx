@@ -113,7 +113,7 @@ const executiveMembers = [
   {
     name: "Harsh Bhargav",
     role: "Technical Secretary",
-    image: "/team/harsh.png",
+    image: "/team/Harsh.png",
     socials: {
       linkedin: "https://iic.bitsindri.ac.in/Team",
       instagram: "https://iic.bitsindri.ac.in/Team",
@@ -200,7 +200,7 @@ const associateMembers = [
   {
     name: "Shivangi Kumari",
     role: "Innovation Program",
-    image: "/team/Shivangi.png",
+    image: "/team/shivangi.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/shivangi-kumari-67b927287/",
       instagram:
@@ -599,9 +599,9 @@ const coordinators = [
   {
     name: "Maitri",
     role: "Operations",
-    image: "/team/Maitri.png",
+    image: "/team/maitri.png",
     socials: {
-      linkedin: "",
+      linkedin: "#",
       instagram: "#",
       mail: "mailto:singhmaitri233@gmail.com",
     },

@@ -5,7 +5,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-linear-to-b from-accent-900 to-transparent text-white py-12 px-6 md:px-16">
+    <footer
+      id="footer"
+      className="bg-linear-to-b from-accent-900 to-transparent text-white py-12 px-6 md:px-16"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-10">
@@ -15,7 +18,7 @@ const Footer = () => {
               <div className="h-12 w-auto flex items-center">
                 <a href="/" alt="E-Summit">
                   <Image
-                    src="/images/E-SUMMIT-06.png"
+                    src="/images/E-SUMMIT-06.webp"
                     alt="Logo"
                     width={160}
                     height={160}
