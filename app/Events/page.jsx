@@ -10,17 +10,17 @@ const eventCategories = ["All", "Competitions", "Workshops", "Networking"];
 const events = [
   {
     id: 1,
-    title: "E-Summit 2026",
+    title: "TEXcelerate 2026",
     revealed: false,
     category: "Competitions",
-    date: "Mar 13th",
-    time: "09:00 AM",
+    date: "March 13th",
+    time: "12:00 PM",
     venue: "BIT Sindri Campus",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi ratione minima obcaecation.",
-    image: "/images/hero.webp",
-    detailsLink: "",
-    registerLink: "",
+      "TEXcelerate 2026 is a flagship idea pitching and innovation challenge focused on scalable industry solutions.",
+    image: "/images/texcelerate.webp",
+    detailsLink: "/DOCS/TEXcelerate.docx",
+    registerLink: "https://unstop.com/o/TbwOScl?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 2,
