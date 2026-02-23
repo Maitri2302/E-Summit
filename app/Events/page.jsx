@@ -3,7 +3,6 @@
 import { MapPin, Calendar } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 
 const eventCategories = ["All", "Competitions", "Workshops", "Networking"];
 
@@ -182,7 +181,6 @@ const events = [
 //   },
 // ];
 
-
 const EventCard = ({ event }) => (
   <div className="group relative bg-[#160021] border border-white/5 rounded-xl overflow-hidden transition-all duration-500 hover:border-accent-500/50 ">
     {/* Reveal card */}
@@ -194,7 +192,7 @@ const EventCard = ({ event }) => (
     )}
 
     <div className="">
-      <div className="aspect-video w-full overflow-hidden">
+      <div className="relative w-full aspect-[4/5] overflow-hidden">
         <Image
           src={event.image}
           alt={event.title}
@@ -260,8 +258,6 @@ const EventCard = ({ event }) => (
     </div>
   </div>
 );
-
-
 
 export default function Page() {
   const [filter, setFilter] = useState("All");
