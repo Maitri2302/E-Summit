@@ -196,7 +196,7 @@ const events = [
 // ];
 
 const EventCard = ({ event }) => (
-  <div className="group relative bg-[#160021] border border-white/5 rounded-xl overflow-hidden transition-all duration-500 hover:border-accent-500/50 ">
+  <div className="group relative bg-gradient-to-b from-[#160021] to-[#0c0014] border border-white/5 rounded-xl overflow-hidden transition-all duration-500 hover:border-accent-500/50 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(168,85,247,0.15)]">
     {/* Reveal card */}
     {!event.revealed && (
       <div className="absolute inset-0 bg-accent-100/10 h-full w-full backdrop-blur-sm text-center flex flex-col items-center justify-center font-kiona font-bold text-sm text-gray-300">
@@ -206,17 +206,19 @@ const EventCard = ({ event }) => (
     )}
 
     <div className="">
-      <div className="relative w-full aspect-[4/5] overflow-hidden">
+      <div className="relative w-full overflow-hidden">
         <Image
           src={event.image}
           alt={event.title}
           width={500}
           height={300}
-          className={`w-full h-full object-cover transition-transform duration-700 ${event.revealed && "group-hover:scale-110 "}`}
+          className={`w-full h-auto object-cover transition-transform duration-700 ${
+  event.revealed ? "group-hover:scale-110" : ""
+}`}
         />
         {event.revealed && (
           <div className="absolute top-4 left-4">
-            <span className="bg-accent-600/40 backdrop-blur-2xl border border-accent-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+            <span className="bg-accent-500/20 backdrop-blur-md border border-accent-400/40 shadow-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
               {event.category}
             </span>
           </div>
@@ -225,6 +227,7 @@ const EventCard = ({ event }) => (
 
       <div className="px-4 py-6">
         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors">
+          <div className="h-[2px] w-0 group-hover:w-full bg-gradient-to-r from-accent-400 to-purple-600 transition-all duration-500"></div>
           {event.title}
         </h3>
 
@@ -282,13 +285,16 @@ export default function Page() {
   return (
     <div className="min-h-screen text-white pb-20">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center px-6 pt-20">
+      <section className="relative h-[70vh] flex items-center justify-center px-6 pt-20 overflow-hidden">
+        
+        
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.15),transparent_70%)]"></div>
         <Image
           src="/images/event-hero.webp"
           alt="Event Background"
           fill
           priority
-          className="object-cover opacity-30"
+          className="object-cover opacity-30 scale-105"
         />
         <div className="relative z-10 text-center max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -298,6 +304,7 @@ export default function Page() {
             Discover innovation challenges, competitions, and networking events
             designed to turn ideas into action.
           </p>
+          
         </div>
       </section>
 
@@ -310,7 +317,7 @@ export default function Page() {
               onClick={() => setFilter(cat)}
               className={`px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all ${
                 filter === cat
-                  ? "bg-accent-900 text-white"
+                  ? "bg-gradient-to-r from-accent-700 to-purple-700 text-white shadow-lg"
                   : "text-gray-400 hover:text-white"
               }`}
             >
