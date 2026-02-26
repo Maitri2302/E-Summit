@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Distinguished Speakers",
+  title: "Speakers",
   description:
     "Learn from unicorn founders, venture capitalists, and BIT Sindri's notable alumni. Join us for keynote sessions that redefine the entrepreneurial paradigm.",
   keywords: [
