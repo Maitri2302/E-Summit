@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Meet the Visionaries",
+  title: "Team",
   description:
     "The dedicated student team behind E-Cell BIT Sindri. Meet the organizers shaping the future of entrepreneurship in Jharkhand.",
   openGraph: {

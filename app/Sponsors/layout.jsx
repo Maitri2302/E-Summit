@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Our Partners & Sponsors",
+  title: "Our Partners",
   description:
     "Meet the industry giants and startup ecosystem enablers supporting E-Summit '26 at BIT Sindri. Explore our title, platinum, and gold sponsors.",
   openGraph: {

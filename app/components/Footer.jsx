@@ -56,8 +56,6 @@ const Footer = () => {
                 Address
               </h4>
               <address className="not-italic text-gray-300 text-sm leading-relaxed">
-                Incubation Centre, IT Building
-                <br />
                 BIT Sindri
                 <br />
                 Sindri, Dhanbad, Jharkhand 828123
@@ -106,7 +104,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="https://innovathonbits.bitsindri.ac.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
                   INNOVATHON
                 </a>
               </li>
@@ -125,11 +128,11 @@ const Footer = () => {
               >
                 <div className="flex items-center gap-2">
                   <Mail size={14} className="font-bold" />
-                  <p>iic@bitsindri.ac.in</p>
+                  <p>esummit@bitsindri.ac.in</p>
                 </div>
               </a>
               <a
-                href="mailto:iic@bitsindri.ac.in"
+                href="mailto:esummit@bitsindri.ac.in"
                 className="text-gray-300 hover:text-white transition-colors text-sm"
               >
                 <div className="flex items-center gap-2">
@@ -153,19 +156,9 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-          <div className="flex space-x-6 md:space-x-12">
-            <a href="#" className="hover:text-white">
-              Terms & Conditions
-            </a>
-            <a href="#" className="hover:text-white">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-white">
-              Refund Policy
-            </a>
-          </div>
+          <div className="">Crafted with ❤️ by the Team IIC BIT Sindri</div>
           <div className="text-center md:text-right">
-            © 2026 E-Summit BIT Sindri. All rights reserved.
+            © 2026 IIC BIT Sindri. All rights reserved.
           </div>
         </div>
       </div>
