@@ -176,27 +176,40 @@ const workshops = [
 ];
 
 const WorkshopCard = ({ workshop }) => (
-  <div
-    className={`relative group p-px rounded-2xl transition-all duration-500 bg-transparent`}
-  >
-    <div className="bg-[#160021] rounded-2xl p-6 h-full border border-white/10 group-hover:border-accent-500/50 transition-colors">
-      {/* Logo Container */}
-      <div className="rounded-xl h-40 w-full overflow-hidden mb-6">
+  <div className="relative group rounded-2xl transition-all duration-500 hover:-translate-y-2">
+    
+    {/* Subtle Dark Gradient Border */}
+    <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-purple-900 via-fuchsia-800 to-indigo-900 opacity-0 group-hover:opacity-40 blur-md transition duration-500"></div>
+
+    {/* Main Card */}
+    <div className="relative bg-[#0b0014]/95 backdrop-blur-2xl rounded-2xl p-6 h-full 
+                    border border-purple-900/40 
+                    group-hover:border-purple-600/50 
+                    transition-all duration-500 
+                    shadow-xl shadow-black/40 
+                    group-hover:shadow-purple-900/30">
+      
+      {/* Image */}
+      <div className="rounded-xl h-48 w-full overflow-hidden mb-6 bg-black">
         <Image
           src={workshop.logo}
           alt={workshop.provider}
-          width={160}
-          height={160}
-          className="w-full h-full object-cover"
+          width={400}
+          height={300}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
       </div>
 
       {/* Content */}
-      <h3 className="text-white text-xl font-bold mb-1">{workshop.title}</h3>
-      {/* <p className="text-gray-400 text-[10px] font-bold tracking-widest uppercase mb-4">
-        BY <span className="text-gray-200">{workshop.provider}</span>
-      </p> */}
-      <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
+      <h3 className="text-white text-xl font-semibold mb-3 
+                     group-hover:text-purple-300 
+                     transition-colors duration-300">
+        {workshop.title}
+      </h3>
+
+      <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 
+                    group-hover:text-gray-300 
+                    transition-colors duration-300">
         {workshop.description}
       </p>
     </div>
