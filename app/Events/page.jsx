@@ -19,7 +19,8 @@ const events = [
       "TEXcelerate 2026 is a flagship idea pitching and innovation challenge focused on scalable industry solutions.",
     image: "/images/texcelerate.webp",
     detailsLink: "/DOCS/TEXcelerate.docx",
-    registerLink: "https://unstop.com/o/TbwOScl?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
+    registerLink:
+      "https://unstop.com/o/TbwOScl?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 2,
@@ -33,7 +34,8 @@ const events = [
       "UDAAN UG Fellowship supports research-driven undergraduate innovation aligned with national priorities.",
     image: "/images/udaan.webp",
     detailsLink: "/DOCS/udaan.docx",
-    registerLink: "https://unstop.com/o/AiSrQMP?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
+    registerLink:
+      "https://unstop.com/o/AiSrQMP?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 3,
@@ -47,7 +49,8 @@ const events = [
       "INNOVATHON 3.0 is a 36-hour innovation hackathon focused on real-world technology solutions.",
     image: "/images/inn.webp",
     detailsLink: "/DOCS/INNOVATHON.docx",
-    registerLink: "https://unstop.com/o/0ODSsAv?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
+    registerLink:
+      "https://unstop.com/o/0ODSsAv?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 4,
@@ -61,7 +64,8 @@ const events = [
       "Being an Entrepreneur is a case-based competition focused on real-world business strategy and decision-making.",
     image: "/images/BAE.webp",
     detailsLink: "/DOCS/entrepreneur.docx",
-    registerLink: "https://unstop.com/o/DkbmFT6?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
+    registerLink:
+      "https://unstop.com/o/DkbmFT6?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 5,
@@ -75,7 +79,8 @@ const events = [
       "Equity Minds is a virtual investment simulation where participants think and decide like venture capitalists.",
     image: "/images/hero.webp",
     detailsLink: "/DOCS/equityminds.docx",
-    registerLink: "https://unstop.com/o/ASvD0tC?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
+    registerLink:
+      "https://unstop.com/o/ASvD0tC?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 6,
@@ -192,7 +197,7 @@ const EventCard = ({ event }) => (
     )}
 
     <div className="">
-      <div className="relative w-full aspect-[4/5] overflow-hidden">
+      <div className="relative w-full aspect-4/5 overflow-hidden">
         <Image
           src={event.image}
           alt={event.title}
@@ -200,6 +205,7 @@ const EventCard = ({ event }) => (
           height={300}
           className={`w-full h-full object-cover transition-transform duration-700 ${event.revealed && "group-hover:scale-110 "}`}
         />
+        <div className="absolute inset-0 bg-linear-to-t from-[#0c0014] via-transparent to-transparent"></div>
         {event.revealed && (
           <div className="absolute top-4 left-4">
             <span className="bg-accent-600/40 backdrop-blur-2xl border border-accent-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
@@ -276,6 +282,7 @@ export default function Page() {
           priority
           className="object-cover opacity-30"
         />
+        <div className="absolute inset-0 bg-linear-to-t from-[#0c0014] via-transparent to-transparent"></div>
         <div className="relative z-10 text-center max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             THE <span className="text-accent-400">LINEUP</span>

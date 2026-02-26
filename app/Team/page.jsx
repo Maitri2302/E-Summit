@@ -6,65 +6,90 @@ import { Linkedin, Instagram, Mail } from "lucide-react";
 
 const facultyMembers = [
   {
+    name: "Prof. D.K. Singh",
+    role: "Chief Patron",
+    image: "/team/dk.singh.jpeg",
+  },
+  {
     name: "Prof. Pankaj Rai",
-    role: "Chairman IIC",
-    image: "/team/pankajrai.webp",
+    role: "Patron",
+    image: "/team/bits-d.webp",
   },
   {
     name: "Prof. Prakash Kumar",
-    role: "President IIC",
+    role: "Chairman cum Convener",
     image: "/team/prakash.jpg",
   },
   {
     name: "Dr. S C Dutta",
-    role: "Vice President IIC",
-    image: "/team/sc.webp",
+    role: "Secretary",
+    image: "/team/SCdatta.webp",
   },
-  { name: "Dr. Rahul Kumar", role: "Convener", image: "/team/rahul.webp" },
+  { name: "Dr. Rahul Kumar", role: "Co-Convener", image: "/team/rahul.webp" },
+  // {
+  //   name: "Prof. R.K. Verma",
+  //   role: "Co-Convener",
+  //   image: "/team/rkverma.webp",
+  // },
   {
     name: "Dr. Mukesh Chandra",
-    role: "Innovation Activity Coordinator",
+    role: "Faculty Coordinator",
     image: "/team/mukesh.webp",
   },
   {
     name: "Mr. Khustar Ansari",
-    role: "Hackathon Coordinator",
-    image: "/team/khustar.webp",
+    role: "Faculty Coordinator",
+    image: "/team/khustarA.webp",
   },
   {
-    name: "Mr. Vijay Besra",
-    role: "ARIIA Coordinator",
+    name: "Mr. Sanjay Pal",
+    role: "Faculty Coordinator",
+    image: "/team/sanjay_pal.webp",
+  },
+  {
+    name: "Mr. Vijay Kr. Besra",
+    role: "Faculty Coordinator",
     image: "/team/vijay.webp",
   },
   {
-    name: "Dr. Kashif Hasan Kazmi",
-    role: "Internal Event Coordinator",
-    image: "/team/kashif.webp",
-  },
-  {
-    name: "Md Izhar Hussain",
-    role: "VP of Customer Success",
-    image: "/team/fac.webp",
-  },
-  {
-    name: "Mr. Sanjay Oraon",
-    role: "IPR Activity Coordinator",
-    image: "/team/sanjay.webp",
+    name: "Mr. Izhar Hussain",
+    role: "Faculty Coordinator",
+    image: "/team/izhar.webp",
   },
   {
     name: "Dr. Priyanka Kumari",
-    role: "NIRF Coordinator",
+    role: "Faculty Coordinator",
     image: "/team/mam.webp",
   },
   {
-    name: "Dr. Abhijeet Anand",
-    role: "Internship Coordinator",
-    image: "/team/abhijit.webp",
+    name: "Dr. Kashif Hasan Kazmi",
+    role: "Faculty Coordinator",
+    image: "/team/kashif.webp",
   },
   {
+    name: "Mr. Sanjay Oraon",
+    role: "Faculty Coordinator",
+    image: "/team/sanjayO.webp",
+  },
+  {
+    name: "Dr. Abhijeet Anand",
+    role: "Faculty Coordinator",
+    image: "/team/abhijeetsir.webp",
+  },
+  // {
+  //   name: "Dr. Arvind Kumar",
+  //   role: "Faculty Coordinator",
+  //   image: "/team/arvindsir.webp",
+  // },
+  {
     name: "Mr. Roshan Shankar",
-    role: "Research & Development Coordinator",
+    role: "Faculty Coordinator",
     image: "/team/roshan.webp",
+  },
+  {
+    name: "Ms. Meenu Manjari",
+    role: "Faculty Coordinator",
+    image: "/team/minu_manjari.webp",
   },
 ];
 
@@ -157,7 +182,7 @@ const associateMembers = [
   {
     name: "Utsav Jha",
     role: "Operations",
-    image: "/team/Utsav.webp",
+    image: "/team/utsav.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/utsav-jha-021009211",
       instagram:
@@ -190,7 +215,7 @@ const associateMembers = [
   {
     name: "Kunal Kumar Sonkar",
     role: "Startup & Incubation",
-    image: "/team/kunal.webp",
+    image: "/team/kunal.png",
     socials: {
       linkedin: "https://www.linkedin.com/kunal-sonkar-bits",
       instagram: "https://www.instagram.com/oye_kunaaal?igsh=MzV2eDR2emUzamt4",
@@ -388,18 +413,17 @@ const coordinators = [
       mail: "mailto:tanishq.iic@bitsindri.ac.in",
     },
   },
-    {
-        name: "Mantasha Fatima",
-        role: "Editorial",
-        image: "/team/mantasha.png",
-        socials: {
-            linkedin:
-                "https://www.linkedin.com/in/mantasha-fatima-b9016b346?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-            instagram:
-                "https://www.instagram.com/_._mantu?igsh=MWQ3dHJndDQzeDJ4dQ==",
-            mail: "mailto:mantasha1509@gmail.com",
-        },
+  {
+    name: "Mantasha Fatima",
+    role: "Editorial",
+    image: "/team/mantasha.png",
+    socials: {
+      linkedin:
+        "https://www.linkedin.com/in/mantasha-fatima-b9016b346?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      instagram: "https://www.instagram.com/_._mantu?igsh=MWQ3dHJndDQzeDJ4dQ==",
+      mail: "mailto:mantasha1509@gmail.com",
     },
+  },
   {
     name: "Anish Kumar",
     role: "Operations",
@@ -624,52 +648,68 @@ const coordinators = [
 /* ================= VERTICAL CARD ================= */
 
 const TeamCard = ({ member, card }) => (
-  <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl group bg-[#12001a]">
-    
-    {/* Image Wrapper */}
-    <div className="absolute inset-0">
-      <Image
-        src={member.image}
-        alt={member.name}
-        fill
-        sizes="(max-width:768px) 100vw, 25vw"
-        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-      />
-    </div>
+  <div className="relative h-115 w-full rounded-xl overflow-hidden shadow-2xl group">
+    {/* Background Image */}
+    <Image
+      src={member.image}
+      alt={member.name}
+      fill
+      className="object-cover z-5"
+    />
 
-    {/* Dark Gradient */}
-    <div className="absolute inset-0 bg-gradient-to-t from-[#0b0014] via-transparent to-transparent z-10" />
+    {/* Bottom Gradient */}
+    <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent z-10" />
 
-    {/* Vertical Role Strip */}
-    <div className="absolute right-0 top-0 h-full w-14 bg-[#1a0028] flex items-center justify-center z-20">
-      <span className="rotate-90 text-white/40 font-semibold tracking-widest text-sm whitespace-nowrap">
+    {/* Right Vertical Purple Strip */}
+    <div className="absolute top-0 right-0 h-full w-16 bg-[#160021] flex items-start justify-center pt-16 z-0">
+      <span className="rotate-90 text-white/40 font-semibold tracking-widest text-xl">
         {member.role.toUpperCase()}
       </span>
     </div>
 
-    {/* Content */}
-    <div className="absolute bottom-6 left-6 z-30">
-      <h3 className="text-2xl font-bold text-white mb-2">
-        {member.name}
-      </h3>
+    {/* Text Content */}
+    <div className="absolute bottom-6 left-6 text-white/80 z-30">
+      <h3 className="text-2xl font-bold mb-1">{member.name}</h3>
+      {card === "faculty" && (
+        <p className="text-sm opacity-80 uppercase tracking-wide">
+          {member.role}
+        </p>
+      )}
 
       {member.socials && (
-        <div className="flex gap-4 text-gray-300">
+        <div className="flex gap-4 mt-4 text-gray-400">
           {member.socials.linkedin && (
-            <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer">
-              <Linkedin size={18} className="hover:text-purple-400 transition" />
+            <a
+              href={member.socials.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin
+                size={18}
+                className="cursor-pointer hover:text-purple-300"
+              />
             </a>
           )}
 
           {member.socials.instagram && (
-            <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer">
-              <Instagram size={18} className="hover:text-purple-400 transition" />
+            <a
+              href={member.socials.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram
+                size={18}
+                className="cursor-pointer hover:text-purple-300"
+              />
             </a>
           )}
 
           {member.socials.mail && (
             <a href={member.socials.mail}>
-              <Mail size={18} className="hover:text-purple-400 transition" />
+              <Mail
+                size={18}
+                className="cursor-pointer hover:text-purple-300"
+              />
             </a>
           )}
         </div>
@@ -731,7 +771,7 @@ export default function Page() {
       <section className="px-8">
         {/* Faculty Section */}
         <h2 className="text-2xl md:text-3xl uppercase font-bold text-center mb-2 md:mb-4">
-          Faculty Members
+          ORGANISING COMMITTEE
         </h2>
         <p className="h-0.5 w-2xs md:w-sm bg-linear-to-r from-transparent via-purple-500 to-transparent mx-auto mb-16"></p>
 

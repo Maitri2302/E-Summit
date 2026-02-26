@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Events & Competitions",
+  title: "Events",
   description:
     "Participate in high-stakes Ideathons, Pitch-fests, and Business simulations at E-Summit '26. Compete for prize pools and mentorship from industry leaders.",
   keywords: [
