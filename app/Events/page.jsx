@@ -3,94 +3,112 @@
 import { MapPin, Calendar } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 
 const eventCategories = ["All", "Competitions", "Workshops", "Networking"];
 
 const events = [
   {
     id: 1,
-    title: "E-Summit 2026",
-    revealed: false,
+    title: "TEXcelerate 2026",
+    revealed: true,
     category: "Competitions",
-    date: "Mar 13th",
-    time: "09:00 AM",
+    date: "March 13th",
+    time: "12:00 PM",
     venue: "BIT Sindri Campus",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi ratione minima obcaecation.",
-    image: "/images/hero.webp",
-    detailsLink: "",
-    registerLink: "",
+      "TEXcelerate 2026 is a flagship idea pitching and innovation challenge focused on scalable industry solutions.",
+    image: "/images/tex.webp",
+    detailsLink: "/DOCS/TEXcelerate.docx",
+    registerLink:
+      "https://unstop.com/o/TbwOScl?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 2,
-    title: "E-Summit 2026",
-    revealed: false,
+    title: "UDAAN UG Fellowship",
+    revealed: true,
     category: "Competitions",
-    date: "Mar 13th",
-    time: "09:00 AM",
+    date: "March 14th",
+    time: "03:30 AM",
     venue: "BIT Sindri Campus",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi ratione minima obcaecation.",
-    image: "/images/hero.webp",
-    detailsLink: "",
-    registerLink: "",
+      "UDAAN UG Fellowship supports research-driven undergraduate innovation aligned with national priorities.",
+    image: "/images/udaan.webp",
+    detailsLink: "/DOCS/udaan.docx",
+    registerLink:
+      "https://unstop.com/o/AiSrQMP?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 3,
-    title: "E-Summit 2026",
-    revealed: false,
+    title: "INNOVATHON 3.0",
+    revealed: true,
     category: "Competitions",
-    date: "Mar 13th",
-    time: "09:00 AM",
+    date: "March 13th",
+    time: "11:00 PM",
     venue: "BIT Sindri Campus",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi ratione minima obcaecation.",
-    image: "/images/hero.webp",
-    detailsLink: "",
-    registerLink: "",
+      "INNOVATHON 3.0 is a 36-hour innovation hackathon focused on real-world technology solutions.",
+    image: "/images/inn.webp",
+    detailsLink: "/DOCS/INNOVATHON.docx",
+    registerLink:
+      "https://unstop.com/o/0ODSsAv?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 4,
-    title: "E-Summit 2026",
-    revealed: false,
+    title: "Being an Entrepreneur",
+    revealed: true,
     category: "Competitions",
-    date: "Mar 13th",
-    time: "09:00 AM",
+    date: "March 14th",
+    time: "10:00 AM",
     venue: "BIT Sindri Campus",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi ratione minima obcaecation.",
-    image: "/images/hero.webp",
-    detailsLink: "",
-    registerLink: "",
+      "Being an Entrepreneur is a case-based competition focused on real-world business strategy and decision-making.",
+    image: "/images/BAE.webp",
+    detailsLink: "/DOCS/entrepreneur.docx",
+    registerLink:
+      "https://unstop.com/o/DkbmFT6?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 5,
-    title: "E-Summit 2026",
-    revealed: false,
-    category: "Workshops",
-    date: "Mar 13th",
-    time: "09:00 AM",
+    title: "Equity Minds",
+    revealed: true,
+    // category: "Networking",
+    date: "March 13th",
+    time: "12:00 PM",
     venue: "BIT Sindri Campus",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi ratione minima obcaecation.",
-    image: "/images/hero.webp",
-    detailsLink: "",
-    registerLink: "",
+      "Equity Minds is a virtual investment simulation where participants think and decide like venture capitalists.",
+    image: "/images/eq.webp",
+    detailsLink: "/DOCS/equityminds.docx",
+    registerLink:
+      "https://unstop.com/o/ASvD0tC?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 6,
-    title: "E-Summit 2026",
-    revealed: false,
-    category: "Networking",
-    date: "Mar 13th",
-    time: "09:00 AM",
+    title: "BuildX Expo for School",
+    revealed: true,
+    // category: "Competitions",
+    date: "March 13th",
+    time: "12:00 PM",
     venue: "BIT Sindri Campus",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi ratione minima obcaecation.",
-    image: "/images/hero.webp",
-    detailsLink: "",
-    registerLink: "",
+      "A platform for school students to showcase creative models and early-stage innovations that reflect curiosity, scientific thinking, and problem-solving skills.",
+    image: "/images/schoolExp.webp",
+    detailsLink: "/DOCS/Expo.pdf",
+    registerLink: "https://forms.gle/aHw6W625d3W8Ye4H9",
+  },
+  {
+    id: 7,
+    title: "BuildX Expo for College",
+    revealed: true,
+    // category: "Competitions",
+    date: "March 13th",
+    time: "12:00 PM",
+    venue: "BIT Sindri Campus",
+    description:
+      "A project exhibition platform for college students to present research-driven ideas, working prototypes, and technology-based solutions addressing real-world challenges.",
+    image: "/images/collegeExp.webp",
+    detailsLink: "/DOCS/Expo.pdf",
+    registerLink: "https://forms.gle/26QTBdAxUTc589jk7",
   },
 ];
 
@@ -182,47 +200,88 @@ const events = [
 //   },
 // ];
 
-
 const EventCard = ({ event }) => (
-    <div className="group relative">
+  <div className="group relative bg-[#160021] border border-white/5 rounded-xl overflow-hidden transition-all duration-500 hover:border-accent-500/50 hover:-translate-y-3 hover:rotate-[0.5deg] hover:shadow-[0_25px_70px_rgba(168,85,247,0.2)]">
 
-        {/* Background Glass Layer (THIS MOVES) */}
-        <div className="absolute inset-0 bg-[#160021] border border-white/10 rounded-2xl transition-all duration-500 group-hover:-translate-y-4 group-hover:shadow-[0_20px_40px_rgba(168,85,247,0.3)] group-hover:border-accent-400/50"></div>
+    <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-transparent via-accent-500/30 to-transparent opacity-0 group-hover:opacity-100 blur-sm transition duration-700"></div>
 
-        {/* Content Layer */}
-        <div className="relative rounded-2xl overflow-hidden">
+    {/* Reveal card */}
+    {!event.revealed && (
+      <div className="absolute inset-0 bg-accent-100/10 h-full w-full backdrop-blur-sm text-center flex flex-col items-center justify-center font-kiona font-bold text-sm text-gray-300">
+        Event details will be revealed soon! <br />
+        Stay tuned for updates.
+      </div>
+    )}
 
-            {!event.revealed && (
-                <div className="absolute inset-0 z-20 bg-black/40 backdrop-blur-md flex items-center justify-center text-center text-sm font-bold text-gray-300 px-6">
-                    Event details will be revealed soon! <br />
-                    Stay tuned.
-                </div>
-            )}
+    <div className="">
+      <div className="relative w-full overflow-hidden">
+        <Image
+          src={event.image}
+          alt={event.title}
+          width={500}
+          height={300}
+          className={`w-full h-full object-cover transition-transform duration-700 ${event.revealed && "group-hover:scale-110 "}`}
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-[#0c0014] via-transparent to-transparent"></div>
+        {event.revealed && (
+          <div className="absolute top-4 left-4">
+            <span className="bg-accent-600/40 backdrop-blur-2xl border border-accent-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+              {event.category}
+            </span>
+          </div>
+        )}
+      </div>
 
-            <div className="aspect-video overflow-hidden">
-                <Image
-                    src={event.image}
-                    alt={event.title}
-                    width={500}
-                    height={300}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-            </div>
+      <div className="px-4 py-6">
+        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors">
+          <div className="h-[2px] w-0 group-hover:w-full bg-gradient-to-r from-accent-400 to-purple-600 transition-all duration-500"></div>
+          {event.title}
+        </h3>
 
-            <div className="px-5 py-6">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors">
-                    {event.title}
-                </h3>
+        <p className="text-gray-400 text-sm mb-6 line-clamp-3">
+          {event.description}
+        </p>
 
-                <p className="text-gray-400 text-sm mb-6 line-clamp-3">
-                    {event.description}
-                </p>
-            </div>
+        <div className="w-full px-4 py-2 mb-4 border border-white/10 rounded-lg flex justify-between">
+          <p className="flex items-center gap-2 text-gray-300 text-xs">
+            <Calendar size={16} className="text-accent-500" />
+            {event.date}, {event.time}
+          </p>
+          <p className="flex items-center gap-2 text-gray-300 text-xs">
+            <MapPin size={16} className="text-accent-500" />
+            {event.venue}
+          </p>
         </div>
+
+        <div className="flex gap-4">
+          {/* View Details */}
+          {event.detailsLink && (
+            <a
+              href={event.detailsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full block text-center py-2 rounded-lg border border-white/10 text-gray-300 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
+            >
+              View Details
+            </a>
+          )}
+
+          {/* Register */}
+          {event.registerLink && (
+            <a
+              href={event.registerLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full block text-center py-2 rounded-lg border border-white/10 text-gray-300 text-xs font-bold uppercase tracking-widest hover:bg-accent-700 hover:text-white transition-all duration-300"
+            >
+              Register ➝
+            </a>
+          )}
+        </div>
+      </div>
     </div>
+  </div>
 );
-
-
 
 export default function Page() {
   const [filter, setFilter] = useState("All");
@@ -241,9 +300,13 @@ export default function Page() {
           priority
           className="object-cover opacity-30"
         />
+        <div className="absolute inset-0 bg-linear-to-t from-[#0c0014] via-transparent to-transparent"></div>
         <div className="relative z-10 text-center max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            THE <span className="text-accent-400">LINEUP</span>
+            THE <span className="relative text-accent-400 overflow-hidden">
+  LINEUP
+  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] animate-shine"></span>
+</span>
           </h1>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Discover innovation challenges, competitions, and networking events

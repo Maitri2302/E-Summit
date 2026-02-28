@@ -16,6 +16,7 @@ const Navbar = () => {
   const navItems = [
     { name: "Events", href: "/Events" },
     { name: "Speakers", href: "/Speakers" },
+    { name: "Timeline", href: "/Timeline" },
     { name: "Sponsors", href: "/Sponsors" },
     { name: "Team", href: "/Team" },
   ];
@@ -24,6 +25,7 @@ const Navbar = () => {
     { name: "Home", href: "/" },
     { name: "Events", href: "/Events" },
     { name: "Speakers", href: "/Speakers" },
+    { name: "Timeline", href: "/Timeline" },
     { name: "Sponsors", href: "/Sponsors" },
     { name: "Team", href: "/Team" },
   ];
@@ -112,17 +114,17 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-2.5">
           <Link
-            href="/"
+            href="/Contact"
             className="flex items-center justify-center px-4 py-2 rounded-3xl bg-transparent text-white text-[15px] font-medium border border-purple-400/30 hover:bg-purple-500/20 transition-all"
           >
-            Tickets
+            Contact
           </Link>
 
           <Link
-            href="/Contact"
+            href="https://unstop.com/college-fests/e-summit-26-birsa-institute-of-technology-bit-sindri-443381"
             className="flex items-center justify-center px-4 py-2 rounded-3xl bg-accent-800 text-white text-[15px] border border-white/10 hover:bg-accent-800/60 transition-all cursor-pointer"
           >
-            Contact
+            Register
           </Link>
         </div>
 
@@ -170,16 +172,16 @@ const Navbar = () => {
                 className="flex flex-col gap-4 mt-8 w-64"
               >
                 <a
-                  href="/"
+                  href="/Contact"
                   className="flex items-center justify-center px-4 py-2 rounded-3xl  text-white text-[15px] border border-accent-400/70 hover:bg-accent-800/60 transition-all cursor-pointer"
                 >
-                  Tickets
+                  Contact Us
                 </a>
                 <a
-                  href="/Contact"
+                  href="https://unstop.com/college-fests/e-summit-26-birsa-institute-of-technology-bit-sindri-443381"
                   className="flex items-center justify-center px-4 py-2 rounded-3xl bg-accent-800 text-white text-[15px] border border-white/10 hover:bg-accent-800/60 transition-all cursor-pointer"
                 >
-                  Contact Us
+                  Register
                 </a>
               </motion.div>
             </motion.div>
