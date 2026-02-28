@@ -146,7 +146,7 @@ const associateMembers = [
   {
     name: "Adarsh Kumar",
     role: "Technicals",
-    image: "/team/adarsh.png",
+    image: "/team/adarsh.webp",
     socials: {
       linkedin: "https://www.linkedin.com/in/adarsh-kumar-03a459200",
       instagram:
