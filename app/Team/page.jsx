@@ -182,7 +182,7 @@ const associateMembers = [
   {
     name: "Utsav Jha",
     role: "Operations",
-    image: "/team/utsav.png",
+    image: "/team/Utsav.webp",
     socials: {
       linkedin: "https://www.linkedin.com/in/utsav-jha-021009211",
       instagram:
@@ -215,7 +215,7 @@ const associateMembers = [
   {
     name: "Kunal Kumar Sonkar",
     role: "Startup & Incubation",
-    image: "/team/kunal.png",
+    image: "/team/kunal.webp",
     socials: {
       linkedin: "https://www.linkedin.com/kunal-sonkar-bits",
       instagram: "https://www.instagram.com/oye_kunaaal?igsh=MzV2eDR2emUzamt4",
