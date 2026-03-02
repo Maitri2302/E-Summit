@@ -9,7 +9,7 @@ const stats = [
   { label: "Footfalls", value: "30K+", icon: <Footprints size={32} /> },
   { label: "Startups", value: "250+", icon: <Rocket size={32} /> },
   { label: "Speakers", value: "50+", icon: <MicIcon size={32} /> },
-  { label: "Prize Pool", value: "20L+", icon: <IndianRupee size={32} /> },
+  { label: "Prize Pool", value: "25L+", icon: <IndianRupee size={32} /> },
 ];
 
 const StatsSection = () => {
