@@ -19,7 +19,8 @@ const events = [
       "TEXcelerate 2026 is a flagship idea pitching and innovation challenge focused on scalable industry solutions.",
     image: "/images/tex.webp",
     detailsLink: "/DOCS/TEXcelerate.docx",
-    registerLink: "https://unstop.com/o/TbwOScl?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
+    registerLink:
+      "https://unstop.com/o/TbwOScl?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 2,
@@ -33,7 +34,8 @@ const events = [
       "UDAAN UG Fellowship supports research-driven undergraduate innovation aligned with national priorities.",
     image: "/images/udaan.webp",
     detailsLink: "/DOCS/udaan.docx",
-    registerLink: "https://unstop.com/o/AiSrQMP?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
+    registerLink:
+      "https://unstop.com/o/AiSrQMP?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 3,
@@ -47,7 +49,8 @@ const events = [
       "INNOVATHON 3.0 is a 36-hour innovation hackathon focused on real-world technology solutions.",
     image: "/images/inn.webp",
     detailsLink: "/DOCS/INNOVATHON.docx",
-    registerLink: "https://unstop.com/o/0ODSsAv?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
+    registerLink:
+      "https://unstop.com/o/0ODSsAv?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 4,
@@ -61,7 +64,8 @@ const events = [
       "Being an Entrepreneur is a case-based competition focused on real-world business strategy and decision-making.",
     image: "/images/BAE.webp",
     detailsLink: "/DOCS/entrepreneur.docx",
-    registerLink: "https://unstop.com/o/DkbmFT6?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
+    registerLink:
+      "https://unstop.com/o/DkbmFT6?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 5,
@@ -75,7 +79,8 @@ const events = [
       "Equity Minds is a virtual investment simulation where participants think and decide like venture capitalists.",
     image: "/images/eq.webp",
     detailsLink: "/DOCS/equityminds.docx",
-    registerLink: "https://unstop.com/o/ASvD0tC?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
+    registerLink:
+      "https://unstop.com/o/ASvD0tC?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 6,
@@ -103,7 +108,7 @@ const events = [
       "A project exhibition platform for college students to present research-driven ideas, working prototypes, and technology-based solutions addressing real-world challenges.",
     image: "/images/collegeExp.webp",
     detailsLink: "/DOCS/Expo.pdf",
-    // registerLink: "https://unstop.com/o/DkbmFT6?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
+    registerLink: "https://forms.gle/26QTBdAxUTc589jk7",
   },
 ];
 
@@ -196,7 +201,10 @@ const events = [
 // ];
 
 const EventCard = ({ event }) => (
-  <div className="group relative bg-gradient-to-b from-[#160021] to-[#0c0014] border border-white/5 rounded-xl overflow-hidden transition-all duration-500 hover:border-accent-500/50 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(168,85,247,0.15)]">
+  <div className="group relative bg-[#160021] border border-white/5 rounded-xl overflow-hidden transition-all duration-500 hover:border-accent-500/50 hover:-translate-y-3 hover:rotate-[0.5deg] hover:shadow-[0_25px_70px_rgba(168,85,247,0.2)]">
+
+    <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-transparent via-accent-500/30 to-transparent opacity-0 group-hover:opacity-100 blur-sm transition duration-700"></div>
+
     {/* Reveal card */}
     {!event.revealed && (
       <div className="absolute inset-0 bg-accent-100/10 h-full w-full backdrop-blur-sm text-center flex flex-col items-center justify-center font-kiona font-bold text-sm text-gray-300">
@@ -212,13 +220,12 @@ const EventCard = ({ event }) => (
           alt={event.title}
           width={500}
           height={300}
-          className={`w-full h-auto object-cover transition-transform duration-700 ${
-  event.revealed ? "group-hover:scale-110" : ""
-}`}
+          className={`w-full h-full object-cover transition-transform duration-700 ${event.revealed && "group-hover:scale-110 "}`}
         />
+        <div className="absolute inset-0 bg-linear-to-t from-[#0c0014] via-transparent to-transparent"></div>
         {event.revealed && (
           <div className="absolute top-4 left-4">
-            <span className="bg-accent-500/20 backdrop-blur-md border border-accent-400/40 shadow-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+            <span className="bg-accent-600/40 backdrop-blur-2xl border border-accent-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
               {event.category}
             </span>
           </div>
@@ -285,26 +292,26 @@ export default function Page() {
   return (
     <div className="min-h-screen text-white pb-20">
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center px-6 pt-20 overflow-hidden">
-        
-        
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.15),transparent_70%)]"></div>
+      <section className="relative h-[60vh] flex items-center justify-center px-6 pt-20">
         <Image
           src="/images/event-hero.webp"
           alt="Event Background"
           fill
           priority
-          className="object-cover opacity-30 scale-105"
+          className="object-cover opacity-30"
         />
+        <div className="absolute inset-0 bg-linear-to-t from-[#0c0014] via-transparent to-transparent"></div>
         <div className="relative z-10 text-center max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            THE <span className="text-accent-400">LINEUP</span>
+            THE <span className="relative text-accent-400 overflow-hidden">
+  LINEUP
+  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] animate-shine"></span>
+</span>
           </h1>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Discover innovation challenges, competitions, and networking events
             designed to turn ideas into action.
           </p>
-          
         </div>
       </section>
 
@@ -317,7 +324,7 @@ export default function Page() {
               onClick={() => setFilter(cat)}
               className={`px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all ${
                 filter === cat
-                  ? "bg-gradient-to-r from-accent-700 to-purple-700 text-white shadow-lg"
+                  ? "bg-accent-900 text-white"
                   : "text-gray-400 hover:text-white"
               }`}
             >
