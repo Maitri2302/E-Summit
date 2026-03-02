@@ -108,7 +108,7 @@ const events = [
       "A project exhibition platform for college students to present research-driven ideas, working prototypes, and technology-based solutions addressing real-world challenges.",
     image: "/images/collegeExp.webp",
     detailsLink: "/DOCS/Expo.pdf",
-    // registerLink: "https://unstop.com/o/DkbmFT6?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
+    registerLink: "https://forms.gle/26QTBdAxUTc589jk7",
   },
 ];
 
@@ -201,7 +201,10 @@ const events = [
 // ];
 
 const EventCard = ({ event }) => (
-  <div className="group relative bg-[#160021] border border-white/5 rounded-xl overflow-hidden transition-all duration-500 hover:border-accent-500/50 ">
+  <div className="group relative bg-[#160021] border border-white/5 rounded-xl overflow-hidden transition-all duration-500 hover:border-accent-500/50 hover:-translate-y-3 hover:rotate-[0.5deg] hover:shadow-[0_25px_70px_rgba(168,85,247,0.2)]">
+
+    <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-transparent via-accent-500/30 to-transparent opacity-0 group-hover:opacity-100 blur-sm transition duration-700"></div>
+
     {/* Reveal card */}
     {!event.revealed && (
       <div className="absolute inset-0 bg-accent-100/10 h-full w-full backdrop-blur-sm text-center flex flex-col items-center justify-center font-kiona font-bold text-sm text-gray-300">
@@ -211,7 +214,7 @@ const EventCard = ({ event }) => (
     )}
 
     <div className="">
-      <div className="relative w-full aspect-4/5 overflow-hidden">
+      <div className="relative w-full overflow-hidden">
         <Image
           src={event.image}
           alt={event.title}
@@ -231,6 +234,7 @@ const EventCard = ({ event }) => (
 
       <div className="px-4 py-6">
         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors">
+          <div className="h-[2px] w-0 group-hover:w-full bg-gradient-to-r from-accent-400 to-purple-600 transition-all duration-500"></div>
           {event.title}
         </h3>
 
@@ -299,7 +303,10 @@ export default function Page() {
         <div className="absolute inset-0 bg-linear-to-t from-[#0c0014] via-transparent to-transparent"></div>
         <div className="relative z-10 text-center max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            THE <span className="text-accent-400">LINEUP</span>
+            THE <span className="relative text-accent-400 overflow-hidden">
+  LINEUP
+  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] animate-shine"></span>
+</span>
           </h1>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Discover innovation challenges, competitions, and networking events

@@ -171,7 +171,7 @@ const associateMembers = [
   {
     name: "Adarsh Kumar",
     role: "Technicals",
-    image: "/team/adarsh.png",
+    image: "/team/adarsh.webp",
     socials: {
       linkedin: "https://www.linkedin.com/in/adarsh-kumar-03a459200",
       instagram:
@@ -651,11 +651,13 @@ const TeamCard = ({ member, card }) => (
   <div className="relative h-115 w-full rounded-xl overflow-hidden shadow-2xl group">
     {/* Background Image */}
     <Image
-      src={member.image}
-      alt={member.name}
-      fill
-      className="object-cover z-5"
-    />
+  src={member.image}
+  alt={member.name}
+  fill
+  className={`object-cover z-5 ${
+    member.name === "Adarsh Kumar" ? "scale-125" : ""
+  }`}
+/>
 
     {/* Bottom Gradient */}
     <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent z-10" />
