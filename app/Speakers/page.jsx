@@ -1,3 +1,4 @@
+import React from "react";
 const Reveal = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden ">
@@ -25,7 +26,6 @@ const Reveal = () => {
 };
 export default Reveal;
 
-// import React from "react";
 
 // const speakers = [
 //   {
