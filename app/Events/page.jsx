@@ -17,7 +17,7 @@ const events = [
     venue: "BIT Sindri Campus",
     description:
       "TEXcelerate 2026 is a flagship idea pitching and innovation challenge focused on scalable industry solutions.",
-    image: "/images/texcelerate.webp",
+    image: "/images/tex.webp",
     detailsLink: "/DOCS/TEXcelerate.docx",
     registerLink:
       "https://unstop.com/o/TbwOScl?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
@@ -70,124 +70,39 @@ const events = [
   {
     id: 5,
     title: "Equity Minds",
-    revealed: false,
-    category: "Networking",
-    date: "Feb 8th",
-    time: "03:00 PM",
+    revealed: true,
+    category: "Competitions",
+    date: "March 13th",
+    time: "12:00 PM",
     venue: "BIT Sindri Campus",
     description:
       "Equity Minds is a virtual investment simulation where participants think and decide like venture capitalists.",
-    image: "/images/hero.webp",
+    image: "/images/eq.webp",
     detailsLink: "/DOCS/equityminds.docx",
     registerLink:
       "https://unstop.com/o/ASvD0tC?lb=pWzExtqd&utm_medium=Share&utm_source=WhatsApp",
   },
   {
     id: 6,
-    title: "E-Summit 2026",
-    revealed: false,
-    category: "Networking",
-    date: "Mar 13th",
-    time: "09:00 AM",
+    title: "BuildX Expo for College",
+    revealed: true,
+    category: "Competitions",
+    date: "March 13th",
+    time: "12:00 PM",
     venue: "BIT Sindri Campus",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi ratione minima obcaecation.",
-    image: "/images/hero.webp",
-    detailsLink: "",
-    registerLink: "",
+      "A project exhibition platform for college students to present research-driven ideas, working prototypes, and technology-based solutions addressing real-world challenges.",
+    image: "/images/collegeExp.webp",
+    detailsLink: "/DOCS/Expo.pdf",
+    registerLink: "https://forms.gle/26QTBdAxUTc589jk7",
   },
 ];
 
-//Original events data with all details (for reference)
-// const events = [
-//   {
-//     id: 1,
-//     title: "INNOVATHON 3.0",
-//     revealed: false,
-//     category: "Competitions",
-//     date: "Feb 6th",
-//     time: "09:00 AM",
-//     venue: "BIT Sindri Campus",
-//     description:
-//       "INNOVATHON 3.0 is a 36-hour innovation hackathon focused on real-world technology solutions.",
-//     image: "/images/hero.webp",
-//     detailsLink: "/DOCS/INNOVATHON.docx",
-//     registerLink: "https://example.com/register-innovathon",
-//   },
-//   {
-//     id: 2,
-//     title: "TEXcelerate 2026",
-//     revealed: false,
-//     category: "Competitions",
-//     date: "Feb 6th",
-//     time: "11:00 AM",
-//     venue: "BIT Sindri Campus",
-//     description:
-//       "TEXcelerate 2026 is a flagship idea pitching and innovation challenge focused on scalable industry solutions.",
-//     image: "/images/hero.webp",
-//     detailsLink: "/DOCS/texcelerate.docx",
-//     registerLink: "https://example.com/register-texcelerate",
-//   },
-//   {
-//     id: 3,
-//     title: "UDAAN UG Fellowship",
-//     revealed: false,
-//     category: "Competitions",
-//     date: "Feb 7th",
-//     time: "10:00 AM",
-//     venue: "BIT Sindri Campus",
-//     description:
-//       "UDAAN UG Fellowship supports research-driven undergraduate innovation aligned with national priorities.",
-//     image: "/images/hero.webp",
-//     detailsLink: "/DOCS/udaan.docx",
-//     registerLink: "https://example.com/register-udaan",
-//   },
-//   {
-//     id: 4,
-//     title: "Technology Development Program",
-//     revealed: false,
-//     category: "Competitions",
-//     date: "Feb 7th",
-//     time: "01:00 PM",
-//     venue: "BIT Sindri Campus",
-//     description:
-//       "Technology Development Program supports faculty-led applied research to convert lab innovation into deployment-ready technologies.",
-//     image: "/images/hero.webp",
-//     detailsLink: "/DOCS/tdp.docx",
-//     registerLink: "https://example.com/register-tdp",
-//   },
-//   {
-//     id: 5,
-//     title: "Being an Entrepreneur",
-//     revealed: false,
-//     category: "Competitions",
-//     date: "Feb 8th",
-//     time: "10:00 AM",
-//     venue: "BIT Sindri Campus",
-//     description:
-//       "Being an Entrepreneur is a case-based competition focused on real-world business strategy and decision-making.",
-//     image: "/images/hero.webp",
-//     detailsLink: "/DOCS/entrepreneur.docx",
-//     registerLink: "https://example.com/register-entrepreneur",
-//   },
-//   {
-//     id: 6,
-//     title: "Equity Minds",
-//     revealed: false,
-//     category: "Networking",
-//     date: "Feb 8th",
-//     time: "03:00 PM",
-//     venue: "BIT Sindri Campus",
-//     description:
-//       "Equity Minds is a virtual investment simulation where participants think and decide like venture capitalists.",
-//     image: "/images/hero.webp",
-//     detailsLink: "/DOCS/equityminds.docx",
-//     registerLink: "https://example.com/register-equity",
-//   },
-// ];
-
 const EventCard = ({ event }) => (
-  <div className="group relative bg-[#160021] border border-white/5 rounded-xl overflow-hidden transition-all duration-500 hover:border-accent-500/50 ">
+  <div className="group relative bg-[#160021] border border-white/5 rounded-xl overflow-hidden transition-all duration-500 hover:border-accent-500/50 hover:-translate-y-3 hover:rotate-[0.5deg] hover:shadow-[0_25px_70px_rgba(168,85,247,0.2)]">
+    {/* FIX: Added pointer-events-none so the overlay doesn't block button clicks */}
+    <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-transparent via-accent-500/30 to-transparent opacity-0 group-hover:opacity-100 blur-sm transition duration-700 pointer-events-none"></div>
+
     {/* Reveal card */}
     {!event.revealed && (
       <div className="absolute inset-0 bg-accent-100/10 h-full w-full backdrop-blur-sm text-center flex flex-col items-center justify-center font-kiona font-bold text-sm text-gray-300">
@@ -197,7 +112,7 @@ const EventCard = ({ event }) => (
     )}
 
     <div className="">
-      <div className="relative w-full aspect-4/5 overflow-hidden">
+      <div className="relative w-full overflow-hidden">
         <Image
           src={event.image}
           alt={event.title}
@@ -217,6 +132,7 @@ const EventCard = ({ event }) => (
 
       <div className="px-4 py-6">
         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors">
+          {/* Removed the animated line div here */}
           {event.title}
         </h3>
 
@@ -242,7 +158,7 @@ const EventCard = ({ event }) => (
               href={event.detailsLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full block text-center py-2 rounded-lg border border-white/10 text-gray-300 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
+              className="relative z-10 w-full block text-center py-2 rounded-lg border border-white/10 text-gray-300 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
             >
               View Details
             </a>
@@ -254,7 +170,7 @@ const EventCard = ({ event }) => (
               href={event.registerLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full block text-center py-2 rounded-lg border border-white/10 text-gray-300 text-xs font-bold uppercase tracking-widest hover:bg-accent-700 hover:text-white transition-all duration-300"
+              className="relative z-10 w-full block text-center py-2 rounded-lg border border-white/10 text-gray-300 text-xs font-bold uppercase tracking-widest hover:bg-accent-700 hover:text-white transition-all duration-300"
             >
               Register ➝
             </a>
