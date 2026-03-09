@@ -4,7 +4,6 @@ import { MapPin, Calendar } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 
-
 const eventCategories = ["All", "Competitions", "Workshops", "Networking"];
 
 const events = [
@@ -101,7 +100,6 @@ const events = [
 
 const EventCard = ({ event }) => (
   <div className="group relative bg-[#160021] border border-white/5 rounded-xl overflow-hidden transition-all duration-500 hover:border-accent-500/50 hover:-translate-y-3 hover:rotate-[0.5deg] hover:shadow-[0_25px_70px_rgba(168,85,247,0.2)]">
-
     {/* FIX: Added pointer-events-none so the overlay doesn't block button clicks */}
     <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-transparent via-accent-500/30 to-transparent opacity-0 group-hover:opacity-100 blur-sm transition duration-700 pointer-events-none"></div>
 
@@ -134,7 +132,7 @@ const EventCard = ({ event }) => (
 
       <div className="px-4 py-6">
         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors">
-          <div className="h-[2px] w-0 group-hover:w-full bg-gradient-to-r from-accent-400 to-purple-600 transition-all duration-500"></div>
+          {/* Removed the animated line div here */}
           {event.title}
         </h3>
 
@@ -203,10 +201,7 @@ export default function Page() {
         <div className="absolute inset-0 bg-linear-to-t from-[#0c0014] via-transparent to-transparent"></div>
         <div className="relative z-10 text-center max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            THE <span className="relative text-accent-400 overflow-hidden">
-  LINEUP
-  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] animate-shine"></span>
-</span>
+            THE <span className="text-accent-400">LINEUP</span>
           </h1>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Discover innovation challenges, competitions, and networking events

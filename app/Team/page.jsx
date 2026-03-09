@@ -293,12 +293,33 @@ const coordinators = [
   {
     name: "Krrish Raj",
     role: "Community Engagement",
-    image: "/team/krrish.png",
+    image: "/team/Krrish.png",
     socials: {
       linkedin:
         "https://www.linkedin.com/in/krrish-raj-333926335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       instagram: "https://www.instagram.com/krrish6887?igsh=MWgwc2k0NWVmd2Vt",
       mail: "mailto:krrish01sahu@gmail.com",
+    },
+  },
+  {
+    name: "Maitri",
+    role: "Operations",
+    image: "/team/maitri.png",
+    socials: {
+      linkedin: "#",
+      instagram: "#",
+      mail: "mailto:singhmaitri233@gmail.com",
+    },
+  },
+  {
+    name: "Praveen Kumar Chaurasiya",
+    role: "Editorial",
+    image: "/team/pravin.png",
+    socials: {
+      linkedin:
+        "https://www.linkedin.com/in/praveen-kumar-chaurasiya-a4abb7333/",
+      instagram: "https://www.instagram.com/5022.praveen/?hl=en",
+      mail: "mailto:praveen.iic@bitsindri.ac.in",
     },
   },
   {
@@ -324,17 +345,7 @@ const coordinators = [
       mail: "mailto:ravi.eceug24@bitsindri.ac.in",
     },
   },
-  {
-    name: "Praveen Kumar Chaurasiya",
-    role: "Editorial",
-    image: "/team/pravin.png",
-    socials: {
-      linkedin:
-        "https://www.linkedin.com/in/praveen-kumar-chaurasiya-a4abb7333/",
-      instagram: "https://www.instagram.com/5022.praveen/?hl=en",
-      mail: "mailto:praveen.iic@bitsindri.ac.in",
-    },
-  },
+
   {
     name: "Bibek Kumar",
     role: "Technicals",
@@ -633,16 +644,6 @@ const coordinators = [
       mail: "mailto:piyushdwivedi8709@gmail.com",
     },
   },
-  {
-    name: "Maitri",
-    role: "Operations",
-    image: "/team/maitri.png",
-    socials: {
-      linkedin: "#",
-      instagram: "#",
-      mail: "mailto:singhmaitri233@gmail.com",
-    },
-  },
 ];
 
 /* ================= VERTICAL CARD ================= */
@@ -651,13 +652,13 @@ const TeamCard = ({ member, card }) => (
   <div className="relative h-115 w-full rounded-xl overflow-hidden shadow-2xl group">
     {/* Background Image */}
     <Image
-  src={member.image}
-  alt={member.name}
-  fill
-  className={`object-cover z-5 ${
-    member.name === "Adarsh Kumar" ? "scale-125" : ""
-  }`}
-/>
+      src={member.image}
+      alt={member.name}
+      fill
+      className={`object-cover z-5 ${
+        member.name === "Adarsh Kumar" ? "scale-125" : ""
+      }`}
+    />
 
     {/* Bottom Gradient */}
     <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent z-10" />

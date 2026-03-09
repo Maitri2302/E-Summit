@@ -69,126 +69,52 @@ const workshops = [
     logo: "/images/innovathon25.png",
   },
   {
-  title: "International Symposium on Entrepreneurship in the Digital Era (ISEDE)",
-  provider: "Flagship International Initiative",
-  description: (
-    <>
-      ISEDE is a flagship international initiative by E-Cell, BIT Sindri,
-      aimed at strengthening the startup ecosystem and fostering
-      entrepreneurial excellence. The 3-day symposium brought together
-      global academicians, venture capitalists, industry leaders, and
-      emerging entrepreneurs to explore digital innovation and accelerate
-      startup growth. It stands as a landmark step toward building a
-      culture of innovation and empowering the next generation of founders.
-    </>
-  ),
-  logo: "/images/isede.webp", // replace with actual image if available
-},
-{
-  title: "Keynote on Energy Conservation & PV Efficiency",
-  provider: "National Energy Conservation Day Initiative",
-  description: (
-    <>
-      Organized to mark National Energy Conservation Day, this session
-      featured Dr. Rakesh Kumar (IIT ISM) addressing efficiency loss in
-      photovoltaic systems due to rising temperatures. The lecture
-      highlighted innovative research on dimple-based solar air heaters
-      as a dual solution for cooling solar panels and utilizing waste
-      heat for space heating.
-    </>
-  ),
-  logo: "/images/keynote.webp", // replace with actual image
-},
-{
-  title: "Seminar on CFD for Engineering Design",
-  provider: "IIC 8.0 Academic Initiative",
-  description: (
-    <>
-      In association with the Department of Chemical Engineering,
-      IIC 8.0 hosted distinguished alumnus Dr. Rajesh Ranjan (IIT Kanpur)
-      for an expert session on Computational Fluid Dynamics (CFD).
-      The seminar explored the industrial relevance of simulation tools,
-      inspiring students to integrate CFD into research innovation and
-      engineering-driven startups.
-    </>
-  ),
-  logo: "/images/seminar.webp", // replace with actual image
-},
-{
-  title: "Smart India Hackathon (SIH) 2025 – Internal Round",
-  provider: "Hackathon & Coding Club | IIC 8.0",
-  description: (
-    <>
-      The Internal Round of SIH 2025 engaged <strong>432 students</strong> across{" "}
-      <strong>72 teams</strong>, centered on the theme “Swadeshi for
-      Atmanirbhar Bharat.” Participants developed hardware and software
-      solutions in Smart Education, Disaster Management, and Agriculture.
-      The event served as the official qualifying platform for the
-      national round of Smart India Hackathon 2025.
-    </>
-  ),
-  logo: "/images/sih.webp", // replace with actual SIH image
-},
-{
-  title: "Mentor–Mentee Development Scheme",
-  provider: "IIC 8.0 | BIT Sindri",
-  description: (
-    <>
-      The Mentor–Mentee Scheme connects students with experienced faculty
-      members and industry experts to provide structured guidance on
-      academics, research, innovation, and career development. The
-      initiative fosters continuous mentorship, leadership growth, and
-      entrepreneurial mindset development within the institute.
-    </>
-  ),
-  logo: "/images/mms2.webp", // replace with actual image
-},
-{
-  title: "IDEOGRAPH – Poster Presentation Event",
-  provider: "IIC 7.0 | World Creativity & Innovation Day",
-  description: (
-    <>
-      In celebration of World Creativity and Innovation Day, IIC 7.0
-      organized IDEOGRAPH — an imaginative poster presentation event
-      bringing together student innovators from diverse engineering
-      disciplines. The initiative encouraged creative problem-solving,
-      interdisciplinary thinking, and innovation-driven expression.
-    </>
-  ),
-  logo: "/images/ideograph.webp", // replace with actual image
-},
-{
-  title: "Idea Pitching Competition",
-  provider: "IIC 7.0 | In Collaboration with JUT, Ranchi",
-  description: (
-    <>
-      As part of its mission to promote innovation and problem-solving,
-      IIC 7.0 in collaboration with Jharkhand University of Technology,
-      Ranchi organized the Idea Pitching Competition. The event encouraged
-      students to present innovative, real-world solutions and transform
-      creative ideas into impactful ventures.
-    </>
-  ),
-  logo: "/images/ipc.webp", // replace with actual image
-},
-
-
+    title:
+      "International Symposium on Entrepreneurship in the Digital Era (ISEDE)",
+    provider: "Flagship International Initiative",
+    description: (
+      <>
+        ISEDE is a flagship international initiative by E-Cell, BIT Sindri,
+        aimed at strengthening the startup ecosystem and fostering
+        entrepreneurial excellence. The 3-day symposium brought together global
+        academicians, venture capitalists, industry leaders, and emerging
+        entrepreneurs to explore digital innovation and accelerate startup
+        growth. It stands as a landmark step toward building a culture of
+        innovation and empowering the next generation of founders.
+      </>
+    ),
+    logo: "/images/isede.webp", // replace with actual image if available
+  },
+  {
+    title: "Idea Pitching Competition",
+    provider: "IIC 7.0 | In Collaboration with JUT, Ranchi",
+    description: (
+      <>
+        As part of its mission to promote innovation and problem-solving, IIC
+        7.0 in collaboration with Jharkhand University of Technology, Ranchi
+        organized the Idea Pitching Competition. The event encouraged students
+        to present innovative, real-world solutions and transform creative ideas
+        into impactful ventures.
+      </>
+    ),
+    logo: "/images/ipc.webp", // replace with actual image
+  },
 ];
 
 const WorkshopCard = ({ workshop }) => (
   <div className="relative group rounded-2xl transition-all duration-500 hover:-translate-y-2">
-    
     {/* Subtle Dark Gradient Border */}
     <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-purple-900 via-fuchsia-800 to-indigo-900 opacity-0 group-hover:opacity-40 blur-md transition duration-500"></div>
 
     {/* Main Card */}
-    <div className="relative bg-[#0b0014]/95 backdrop-blur-2xl rounded-2xl p-6 h-full 
+    <div
+      className="relative bg-[#0b0014]/95 backdrop-blur-2xl rounded-2xl p-6 h-full 
                     border border-purple-900/40 
                     group-hover:border-purple-600/50 
                     transition-all duration-500 
                     shadow-xl shadow-black/40 
-                    group-hover:shadow-purple-900/30">
-      
+                    group-hover:shadow-purple-900/30"
+    >
       {/* Image */}
       <div className="rounded-xl h-48 w-full overflow-hidden mb-6 bg-black">
         <Image
@@ -201,15 +127,19 @@ const WorkshopCard = ({ workshop }) => (
       </div>
 
       {/* Content */}
-      <h3 className="text-white text-xl font-semibold mb-3 
+      <h3
+        className="text-white text-xl font-semibold mb-3 
                      group-hover:text-purple-300 
-                     transition-colors duration-300">
+                     transition-colors duration-300"
+      >
         {workshop.title}
       </h3>
 
-      <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 
+      <p
+        className="text-gray-500 text-sm leading-relaxed line-clamp-3 
                     group-hover:text-gray-300 
-                    transition-colors duration-300">
+                    transition-colors duration-300"
+      >
         {workshop.description}
       </p>
     </div>
