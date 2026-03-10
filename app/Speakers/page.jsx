@@ -29,7 +29,7 @@ const speakers = [
     name: "Smt. Sharmistha Dasgupta",
     badge: "Guest of Honor",
     role: "Deputy Director General Scientist-G, DDG & Head of Group, AI Division, NIC Headquarters, New Delhi",
-    image: "/team/sharmistha.jpeg",
+    image: "/team/Sharmisthadasgupta.jpeg",
     color: "from-blue-600 via-indigo-500 to-purple-500",
   },
   {
@@ -43,7 +43,7 @@ const speakers = [
     name: "Shri. Nagendra Nath Mishra",
     badge: "Guest of Honor",
     role: "Scientist-F & Sr. Director (I.T), HoD, MeitY, Govt. of India, NIC, Jharkhand State Centre",
-    image: "/team/nagendra.webp",
+    image: "/team/nagendranath.png",
     color: "from-purple-600 via-blue-500 to-fuchsia-500",
   },
   {
@@ -92,7 +92,7 @@ const speakers = [
     name: "Dr. Lailesh Kumar",
     badge: "Guest of Honor ",
     role: "Chief Technical Officer, TEXMiN Hub, IIT ISM Dhanbad",
-    image: "/team/lailesh.jpeg",
+    image: "/team/Laileshkumar.jpeg",
     color: "from-purple-600 via-fuchsia-500 to-indigo-500",
   },
   {
@@ -106,7 +106,7 @@ const speakers = [
     name: "Mr. Indrajeet Yadav",
     badge: "Guest of Honor ",
     role: "Indian Enterprise Development Service (IEDS), Director, MSME Jharkhand",
-    image: "/team/indrajeet.jpeg",
+    image: "/team/Indrajeetyadav.jpeg",
     color: "from-fuchsia-600 via-purple-500 to-blue-500",
   },
   {
@@ -180,17 +180,19 @@ const SpeakerCard = ({ speaker }) => {
 
       {/* Square Photo: Full Width Header */}
       <div className="relative w-full h-56 rounded-t-3xl overflow-hidden shadow-[0_0_24px_rgba(168,85,247,0.2)] group-hover:shadow-[0_0_36px_rgba(168,85,247,0.45)] transition-shadow duration-500">
-        <Image
-          src={speaker.image}
-          alt={speaker.name}
-          fill
-          className="object-cover object-top"
-          onError={(e) => {
-            e.currentTarget.src =
-              "https://via.placeholder.com/300x400/1a0b2e/a855f7?text=Profile";
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-purple-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="z-0">
+          <Image
+            src={speaker.image}
+            alt={speaker.name}
+            fill
+            className="object-contain"
+            onError={(e) => {
+              e.currentTarget.src =
+                "https://via.placeholder.com/300x400/1a0b2e/a855f7?text=Profile";
+            }}
+          />
+        </div>
+        <div className="absolute z-20 inset-0 bg-gradient-to-t from-purple-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
 
       {/* Content Container */}

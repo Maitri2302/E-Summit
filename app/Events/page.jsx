@@ -3,6 +3,7 @@
 import { MapPin, Calendar } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const eventCategories = ["All", "Competitions", "Workshops", "Networking"];
 
@@ -100,12 +101,10 @@ const events = [
 
 const EventCard = ({ event }) => (
   <div className="group relative bg-[#160021] border border-white/5 rounded-xl overflow-hidden transition-all duration-500 hover:border-accent-500/50 hover:-translate-y-3 hover:rotate-[0.5deg] hover:shadow-[0_25px_70px_rgba(168,85,247,0.2)]">
-    {/* FIX: Added pointer-events-none so the overlay doesn't block button clicks */}
     <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-transparent via-accent-500/30 to-transparent opacity-0 group-hover:opacity-100 blur-sm transition duration-700 pointer-events-none"></div>
 
-    {/* Reveal card */}
     {!event.revealed && (
-      <div className="absolute inset-0 bg-accent-100/10 h-full w-full backdrop-blur-sm text-center flex flex-col items-center justify-center font-kiona font-bold text-sm text-gray-300">
+      <div className="absolute inset-0 bg-accent-100/10 h-full w-full backdrop-blur-sm text-center flex flex-col items-center justify-center font-kiona font-bold text-sm text-gray-300 z-20">
         Event details will be revealed soon! <br />
         Stay tuned for updates.
       </div>
@@ -118,7 +117,9 @@ const EventCard = ({ event }) => (
           alt={event.title}
           width={500}
           height={300}
-          className={`w-full h-full object-cover transition-transform duration-700 ${event.revealed && "group-hover:scale-110 "}`}
+          className={`w-full h-full object-cover transition-transform duration-700 ${
+            event.revealed && "group-hover:scale-110"
+          }`}
         />
         <div className="absolute inset-0 bg-linear-to-t from-[#0c0014] via-transparent to-transparent"></div>
         {event.revealed && (
@@ -132,7 +133,6 @@ const EventCard = ({ event }) => (
 
       <div className="px-4 py-6">
         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors">
-          {/* Removed the animated line div here */}
           {event.title}
         </h3>
 
@@ -152,7 +152,6 @@ const EventCard = ({ event }) => (
         </div>
 
         <div className="flex gap-4">
-          {/* View Details */}
           {event.detailsLink && (
             <a
               href={event.detailsLink}
@@ -164,7 +163,6 @@ const EventCard = ({ event }) => (
             </a>
           )}
 
-          {/* Register */}
           {event.registerLink && (
             <a
               href={event.registerLink}
@@ -188,7 +186,7 @@ export default function Page() {
     filter === "All" ? events : events.filter((e) => e.category === filter);
 
   return (
-    <div className="min-h-screen text-white pb-20">
+    <div className="min-h-screen text-white pb-32">
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center px-6 pt-20">
         <Image
@@ -199,7 +197,13 @@ export default function Page() {
           className="object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-linear-to-t from-[#0c0014] via-transparent to-transparent"></div>
-        <div className="relative z-10 text-center max-w-4xl">
+        {/* Added the exact same Hero animation from the Speakers component */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative z-10 text-center max-w-4xl"
+        >
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             THE <span className="text-accent-400">LINEUP</span>
           </h1>
@@ -207,7 +211,7 @@ export default function Page() {
             Discover innovation challenges, competitions, and networking events
             designed to turn ideas into action.
           </p>
-        </div>
+        </motion.div>
       </section>
 
       {/* Filter Navigation */}
@@ -232,8 +236,23 @@ export default function Page() {
       {/* Events Grid */}
       <main className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredEvents.map((event) => (
-            <EventCard key={event.id} event={event} />
+          {filteredEvents.map((event, index) => (
+            <motion.div
+              key={event.id}
+              initial={{ opacity: 0, y: 40 }}
+              // Triggers animation when card enters viewport
+              whileInView={{ opacity: 1, y: 0 }}
+              // once: false enables vice-versa. margin: "-50px" prevents bottom-page blinking
+              viewport={{ once: false, margin: "-50px" }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                // Modulo 3 creates a perfect left-to-right stagger for a 3-column grid
+                delay: (index % 3) * 0.1,
+              }}
+            >
+              <EventCard event={event} />
+            </motion.div>
           ))}
         </div>
 
