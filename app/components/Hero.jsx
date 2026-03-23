@@ -63,7 +63,7 @@ export default function hero() {
         style={{ top: "47%", left: "49%" }}
       >
         <Image
-          src="/images/E-SUMMIT-06.webp"
+          src="/images/E-SUMMIT_front.webp"
           alt="E-SUMMIT 2026"
           width={850}
           height={400}

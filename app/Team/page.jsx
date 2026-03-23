@@ -131,7 +131,7 @@ const executiveMembers = [
     socials: {
       linkedin: "https://www.linkedin.com/in/manoharjhaa/",
       instagram:
-        "https://www.instagram.com/_manohar.jha_5?igsh=b2ZkYjExcjV2cmFq",
+      "https://www.instagram.com/_manohar.jha_5?igsh=b2ZkYjExcjV2cmFq",
       mail: "mailto:manoharjha809@gmail.com",
     },
   },
@@ -169,14 +169,25 @@ const executiveMembers = [
 
 const associateMembers = [
   {
+    name: "Adarsh Kumar",
+    role: "Technicals",
+    image: "/team/adarsh.webp",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/adarsh-kumar-03a459200",
+      instagram:
+        "https://www.instagram.com/_aadi005?utm_source=qr&igsh=dmIzNDZqY3c2M2h6",
+      mail: "mailto:adarsh.iic@bitsindri.ac.in",
+    },
+  },
+  {
     name: "Rahul Kumar",
     role: "Community Engagement",
     image: "/team/rahul.png",
     socials: {
       linkedin:
-        "https://www.linkedin.com/in/rahul-kumar-98b607290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "https://www.linkedin.com/in/rahul-kumar-98b607290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       instagram:
-        "https://www.instagram.com/im_rahul3651?igsh=MTVpd3BhZm5mYnl5MA==",
+      "https://www.instagram.com/im_rahul3651?igsh=MTVpd3BhZm5mYnl5MA==",
       mail: "mailto:rahul.iic@bitsindri.ac.in",
     },
   },
@@ -274,17 +285,6 @@ const associateMembers = [
       linkedin: "https://www.linkedin.com/kunal-sonkar-bits",
       instagram: "https://www.instagram.com/oye_kunaaal?igsh=MzV2eDR2emUzamt4",
       mail: "mailto:Kunal.iic@bitsindri.ac.in",
-    },
-  },
-  {
-    name: "Adarsh Kumar",
-    role: "Technicals",
-    image: "/team/adarsh.webp",
-    socials: {
-      linkedin: "https://www.linkedin.com/in/adarsh-kumar-03a459200",
-      instagram:
-        "https://www.instagram.com/_aadi005?utm_source=qr&igsh=dmIzNDZqY3c2M2h6",
-      mail: "mailto:adarsh.iic@bitsindri.ac.in",
     },
   },
 ];

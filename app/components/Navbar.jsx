@@ -69,7 +69,7 @@ const Navbar = () => {
         >
           <div className="h-12 md:h-15 w-auto relative">
             <Image
-              src="/images/E-SUMMIT-06.webp"
+              src="/images/E-SUMMIT_front.webp"
               alt="Logo"
               width={180}
               height={60}
