@@ -13,7 +13,7 @@ const events = [
     title: "TEXcelerate 2026",
     revealed: true,
     category: "Competitions",
-    date: "March 13th",
+    date: "April 17th",
     time: "12:00 PM",
     venue: "BIT Sindri Campus",
     description:
@@ -28,7 +28,7 @@ const events = [
     title: "UDAAN UG Fellowship",
     revealed: true,
     category: "Competitions",
-    date: "March 14th",
+    date: "April 18th",
     time: "03:30 AM",
     venue: "BIT Sindri Campus",
     description:
@@ -43,7 +43,7 @@ const events = [
     title: "INNOVATHON 3.0",
     revealed: true,
     category: "Competitions",
-    date: "March 13th",
+    date: "April 17th",
     time: "11:00 PM",
     venue: "BIT Sindri Campus",
     description:
@@ -58,7 +58,7 @@ const events = [
     title: "Being an Entrepreneur",
     revealed: true,
     category: "Competitions",
-    date: "March 14th",
+    date: "April 18th",
     time: "10:00 AM",
     venue: "BIT Sindri Campus",
     description:
@@ -73,7 +73,7 @@ const events = [
     title: "Equity Minds",
     revealed: true,
     category: "Competitions",
-    date: "March 13th",
+    date: "April 17th",
     time: "12:00 PM",
     venue: "BIT Sindri Campus",
     description:
@@ -88,7 +88,7 @@ const events = [
     title: "BuildX Expo for College",
     revealed: true,
     category: "Competitions",
-    date: "March 13th",
+    date: "April 17th",
     time: "12:00 PM",
     venue: "BIT Sindri Campus",
     description:

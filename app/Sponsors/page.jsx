@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 /* ================= TOGGLE ================= */
-// Change this to true if you want full page reveal
 const showRevealPage = false;
 
 /* ================= SPONSOR DATA ================= */
@@ -12,7 +11,7 @@ const mainPartners = [
   {
     name: "BITSAANA",
     type: "Title Sponsor",
-    image: "/images/Bitsaana.jpg",
+    image: "/images/bitsana.webp",
     color: "from-blue-600 via-indigo-500 to-purple-500",
   },
   {
@@ -30,26 +29,29 @@ const mainPartners = [
   {
     name: "Jharkhand University of Technology (JUT), Ranchi",
     type: "Education Partner",
-    image: "/images/jut.jpg",
+    image: "/images/jut.webp",
     color: "from-purple-600 via-fuchsia-500 to-indigo-500",
   },
   {
     name: "TEXMiN Hub IIT ISM Dhanbad",
     type: "Technical Partner",
-    image: "/images/texmin.jpg",
+    image: "/images/texmin.webp",
     color: "from-blue-600 via-indigo-500 to-purple-500",
+    imageSize: "large", // 👈 added
   },
   {
     name: "HDFC Bank",
     type: "Banking Partner",
-    image: "/images/hdfcbank.avif",
+    image: "/images/hdfc.webp",
     color: "from-purple-600 via-fuchsia-500 to-indigo-500",
+    imageSize: "large", // 👈 added
   },
   {
     name: "Custkart",
     type: "Merchandise Partner",
-    image: "/images/custkart.jpeg",
+    image: "/images/custkart.webp",
     color: "from-blue-600 via-indigo-500 to-purple-500",
+    imageSize: "large", // 👈 added
   },
 ];
 
@@ -57,7 +59,7 @@ const foodPartners = [
   {
     name: "Pizza Hut",
     type: "Food Partner",
-    image: "/images/pizzahut.png",
+    image: "/images/pizzahut.webp",
     color: "from-blue-600 via-indigo-500 to-purple-500",
   },
   {
@@ -77,6 +79,12 @@ const foodPartners = [
 /* ================= CARD ================= */
 
 const SponsorCard = ({ sponsor }) => {
+  // Default size vs large size for sponsors with smaller logos
+  const imgClass =
+    sponsor.imageSize === "large"
+      ? "relative w-64 h-40 mb-4 z-10"
+      : "relative w-48 h-28 mb-6 z-10";
+
   return (
     <div
       className="relative w-full h-80 rounded-3xl overflow-hidden
@@ -105,13 +113,12 @@ const SponsorCard = ({ sponsor }) => {
         </div>
       ) : (
         <>
-          <div className="relative w-48 h-28 mb-6 z-10">
+          <div className={imgClass}>
             <Image
               src={sponsor.image}
               alt={sponsor.name}
               fill
               className="object-contain"
-              // Fallback placeholder just in case the image isn't in your folder yet
               onError={(e) => {
                 e.currentTarget.src =
                   "https://via.placeholder.com/300x150/1a0b2e/a855f7?text=Logo";
@@ -136,7 +143,6 @@ const SponsorCard = ({ sponsor }) => {
 
 export default function SponsorsPage() {
   if (showRevealPage) {
-    // Assuming RevealPage is imported or defined elsewhere in your project
     return <RevealPage />;
   }
 
@@ -200,7 +206,7 @@ export default function SponsorsPage() {
                 transition={{
                   duration: 0.6,
                   ease: "easeOut",
-                  delay: (index % 4) * 0.1, // Staggers row by row
+                  delay: (index % 4) * 0.1,
                 }}
               >
                 <SponsorCard sponsor={sponsor} />
@@ -219,11 +225,9 @@ export default function SponsorsPage() {
             <h2 className="text-4xl md:text-5xl font-bold tracking-wide mb-4">
               FOOD <span className="text-purple-500">PARTNERS</span>
             </h2>
-            {/* Subtle decorative divider */}
             <div className="w-24 h-1 bg-purple-500 mx-auto rounded-full opacity-50"></div>
           </motion.div>
 
-          {/* Restricted max width to center the 3 food partners nicely */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto pb-12">
             {foodPartners.map((sponsor, index) => (
               <motion.div
@@ -234,7 +238,7 @@ export default function SponsorsPage() {
                 transition={{
                   duration: 0.6,
                   ease: "easeOut",
-                  delay: (index % 3) * 0.1, // Max 3 columns for food partners
+                  delay: (index % 3) * 0.1,
                 }}
               >
                 <SponsorCard sponsor={sponsor} />
